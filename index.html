@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Unity UXML / USS Previewer</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header>
+  <h1>Unity UXML / USS Previewer</h1>
+  <span>Standalone • no internet required</span>
+  <div class="toolbar">
+    <button type="button" id="loadUxmlBtn">Load UXML</button>
+    <button type="button" id="loadUssBtn">Load USS</button>
+    <button type="button" id="loadCsBtn">Load C#</button>
+    <input id="csFile" type="file" accept=".cs,text/plain" hidden>
+    <button type="button" id="renderBtn">Render <b>Ctrl+Enter</b></button>
+    <button type="button" id="sampleBtn">Load sample</button>
+    <button type="button" id="clearBtn">Clear</button>
+    <button type="button" id="saveUxmlBtn">Save UXML</button>
+    <button type="button" id="saveUssBtn">Save USS</button>
+    <input id="uxmlFile" type="file" accept=".uxml,.xml,text/xml" hidden>
+    <input id="ussFile" type="file" accept=".uss,.css,text/css" hidden>
+  </div>
+</header>
+
+<main>
+  <section class="panel" style="grid-column:1;grid-row:1">
+    <div class="panel-title">UXML</div>
+    <div class="editor"><textarea id="uxml" spellcheck="false"></textarea></div>
+    <div class="status" id="uxmlStatus">Ready</div>
+  </section>
+
+  <div class="splitter vertical-splitter" id="splitter" title="Drag to resize UXML / Preview"></div>
+
+  <section class="panel" style="grid-column:3;grid-row:1">
+    <div class="panel-title">Preview</div>
+    <div id="previewWrap"><div id="preview"></div>
+    <div id="csharpMap" class="csharp-map hidden">
+      <div class="map-title">C# → UXML Mapping</div>
+      <div id="mapRows"></div>
+    </div>
+    <div id="mockPanel" class="mock-panel hidden">
+      <div class="mock-title">C# Mock Data</div>
+      <div id="mockFields"></div>
+    </div></div>
+    <div class="status" id="previewStatus">0 elements</div>
+    <div class="cs-linkbar">
+      <span class="cs-dot" id="csDot"></span>
+      <span class="cs-file" id="csFileName">No C# controller linked</span>
+      <button type="button" class="cs-action" id="toggleMapBtn">C# Mapping</button>
+      <button type="button" class="cs-action" id="runMockBtn">Run Mock</button>
+    </div>
+    <div class="console-panel">
+      <div class="console-head"><span>Console</span><button type="button" class="cs-action" id="clearConsoleBtn">Clear</button></div>
+      <div class="console-body" id="consoleBody"></div>
+    </div>
+  </section>
+
+  <div class="splitter horizontal-splitter" id="horizontalSplitter" title="Drag to resize Preview / USS"></div>
+
+  <section class="panel" style="grid-column:1 / -1;grid-row:3">
+    <div class="panel-title">USS</div>
+    <div class="editor"><textarea id="uss" spellcheck="false"></textarea></div>
+    <div class="status" id="ussStatus">Ready</div>
+  </section>
+</main>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
