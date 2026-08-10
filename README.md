@@ -1,8 +1,12 @@
 # Unity UXML / USS / C# Previewer
 
-https://lewi39.github.io/Unity-Uxml-Previewer/ 
-
 A standalone, browser-based Unity UI Toolkit workbench.
+
+## About
+
+This project was built to provide a lightweight workspace during downtime in restricted environments (such as school networks with restricted traffic and blocked software downloads). It runs completely locally in the browser with zero external network requests or dependencies.
+
+* **Development Note:** This applications initial prototype was **100% AI-generated** using ChatGPT (OpenAI), prompted and assembled to solve a specific workflow constraint on restricted hardware. I might later update this depending on my personal needs.
 
 ## Features
 
@@ -18,19 +22,21 @@ A standalone, browser-based Unity UI Toolkit workbench.
 - No backend required
 - No external runtime dependencies
 
-## Run locally
-
-Open `index.html` in a browser.
-
-## GitHub Pages
-
-1. Create a GitHub repository.
-2. Upload `index.html` and the `assets` folder.
-3. Open **Settings → Pages**.
-4. Select **Deploy from a branch**.
-5. Select the branch containing `index.html` and the `/ (root)` folder.
-6. Open the generated GitHub Pages URL.
-
 ## Important
 
 This is a browser preview/simulator, not Unity itself. It does not execute arbitrary Unity C# or Unity runtime APIs. The C# side parses controller code and simulates UI-related behavior that the previewer understands.
+
+##  Roadmap & Ideas
+
+Potential features for future updates:
+
+- [ ] **GitHub Sync (Fetch & Commit):** Import UXML/USS files directly from a GitHub repo and commit changes back using the GitHub REST API.
+- [ ] **File Export / Import:** Quick drag-and-drop file loading and `.zip` export for UXML/USS pairs.
+
+*(Have an idea? Feel free to open an issue or discussion on the repo!)*
+
+---
+
+##  Project History
+
+* **v1.0.0 (August 2026):** Initial release — 100% AI-generated standalone UXML/USS/C# previewer prototype.
