@@ -10,9 +10,6 @@ This project was built to provide a lightweight workspace during downtime in res
 
 ## Features
 
-- UXML editor with Unity UI Toolkit element/attribute autocomplete
-- USS editor with CSS and Unity USS property autocomplete
-- Editable C# controller editor support
 - C# controller parsing and UXML `root.Q<T>("name")` mapping
 - Mock HUD data and UI updates
 - C# → UXML mapping panel
@@ -29,11 +26,11 @@ This is a browser preview/simulator, not Unity itself. It does not execute arbit
 ##  Roadmap & Ideas
 
 Potential features for future updates:
-
+- [ ] **UXML Editor with Unity UI Toolkit Autocompletion:** UXML editor with Unity UI Toolkit element/attribute autocomplete
+- [ ] **USS, CSS  & Unity USS property autocompletion :** USS editor with CSS and Unity USS property autocomplete
+- [ ] **C# Coding support:**Editable C# controller editor support for UXML Attribute linking controller
 - [ ] **GitHub Sync (Fetch & Commit):** Import UXML/USS files directly from a GitHub repo and commit changes back using the GitHub REST API.
 - [ ] **File Export / Import:** Quick drag-and-drop file loading and `.zip` export for UXML/USS pairs.
-
-*(Have an idea? Feel free to open an issue or discussion on the repo!)*
 
 ---
 
